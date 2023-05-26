@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(74, 51, 107, 0.727);
+}
+
+header .navbar {
+  background-image: linear-gradient(30deg, rgba(74, 51, 107, 0.727), rgb(155, 34, 86));
+  position: relative;
+}
+header .navbar h1 {
+  font-size: 3rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(47, 22, 109);
+  text-shadow: 0 -3px 5px rgb(56, 200, 34), 0 3px 5px rgb(234, 16, 16), -3px 0 5px blue, 3px 0 5px rgb(215, 200, 25);
+  margin-left: 100px;
+}
+header .navbar .logo-img {
+  position: absolute;
+  left: 0;
+  top: -17%;
+}
+
+main .carousel {
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
