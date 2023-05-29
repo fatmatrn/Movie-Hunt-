@@ -1,4 +1,5 @@
 
+
 const baseUrl = "https://api.tvmaze.com";
 
 
@@ -15,5 +16,11 @@ const getShowDetails = (showId, cb) =>{
     .then( (resp) => resp.json() )
     .then( (data) => cb(data) )
 }
+const getShowDetailsWithQuery = (query, cb) =>{
+    const url = `${baseUrl}/search/shows?q=${query}`;
+    fetch(url)
+    .then( (resp) => resp.json() )
+    .then( (data) => cb(data) )
+}
 
-export { searchShows, getShowDetails };
+export { searchShows, getShowDetails,getShowDetailsWithQuery };

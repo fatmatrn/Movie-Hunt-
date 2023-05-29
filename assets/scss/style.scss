@@ -1,5 +1,7 @@
 
 
+
+
 body{
     margin: 0;
     padding: 0;
@@ -19,7 +21,7 @@ header{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(47, 22, 109) ;
     text-shadow: 0 -3px 5px rgb(56, 200, 34),
-    0 3px  5px rgb(234, 16, 16),
+    0 3px  5px  rgb(155, 34, 86),
       -3px 0  5px  blue,
       3px 0  5px  rgb(215, 200, 25);
       margin-left: 100px;
@@ -35,6 +37,22 @@ header{
 main{
     .carousel{
         margin: 0 auto;
+        p{
+          background-color:  rgba(255, 228, 196, 0.682) !important;
+          font-weight: 500;
+        }
+        h5{
+          color: white;
+          display:inline-block;
+          padding: 5px;
+          background-color:  rgba(155, 34, 86, 0.662);
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+}
+      
        }
 }
 
