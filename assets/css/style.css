@@ -21,14 +21,17 @@ header .navbar .logo-img {
   top: -17%;
 }
 
-main .carousel {
+section h3 {
+  color: rgb(155, 34, 86);
+}
+section main .carousel {
   margin: 0 auto;
 }
-main .carousel p {
+section main .carousel p {
   background-color: rgba(255, 228, 196, 0.682) !important;
   font-weight: 500;
 }
-main .carousel h5 {
+section main .carousel h5 {
   color: white;
   display: inline-block;
   padding: 5px;
@@ -38,4 +41,9 @@ main .carousel h5 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+section main .carousel span {
+  font-size: 3rem;
+  text-shadow: 0 3px rgba(51, 1, 23, 0.662), -3px 0 rgba(186, 182, 191, 0.727);
+  color: rgba(0, 0, 0, 0);
 }/*# sourceMappingURL=style.css.map */

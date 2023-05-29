@@ -34,9 +34,16 @@ header{
 }
 
 }
+section{
+
+
+h3{
+color: rgb(155, 34, 86);
+}
 main{
     .carousel{
         margin: 0 auto;
+       
         p{
           background-color:  rgba(255, 228, 196, 0.682) !important;
           font-weight: 500;
@@ -52,7 +59,16 @@ main{
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
 }
+span{
+  font-size: 3rem;
+  text-shadow: 
+  0 3px   rgba(51, 1, 23, 0.662),
+    -3px 0   rgba(186, 182, 191, 0.727);
+    color: #00000000;
+   
+}
+        
       
        }
 }
-
+}

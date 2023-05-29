@@ -1,35 +1,24 @@
 import { searchShows,getShowDetails,getShowDetailsWithQuery } from "./tvmaze-api.js";
 
-const filmImg1 = document.querySelectorAll(".film-img1");
-const filmImg2 = document.querySelectorAll(".film-img2");
-const filmImg3 = document.querySelectorAll(".film-img3");
-//const p = filmImg1.parentElement.querySelector("#firstP")
+const carouselItems = document.querySelectorAll(".carousel-item");
 let randomNum = Math.floor(Math.random()*10000);
 
+let arr = [335,3594,82,431,123,2097,716,541,19]
 
-getShowDetailsWithQuery("you", (score)=>{
-    console.log(score[5].show);
+for(let i=0; i<=arr.length;i++){
 
-    //p.innerHTML = score[5].show.name;
-    for(let [i, film]  of filmImg1.entries()){
-        film.setAttribute("src", score[i].show.image.medium);
+getShowDetails(arr[i], (show)=>{
+    console.log(show.premiered.substring(0,4));
+    let span = document.createElement("span");
+    span.innerHTML=show.premiered.substring(0,4);
 
-        film.parentElement.querySelector("div h5").innerText=score[i].show.name;
-        film.parentElement.querySelector("div p").innerHTML="Language:"+score[i].show.language;
-    }
-    for(let [i, film]  of filmImg2.entries()){
-        film.setAttribute("src", score[i+3].show.image.medium);
+        carouselItems[i].querySelector("img").setAttribute("src", show.image.medium);
+        
 
-        film.parentElement.querySelector("div h5").innerText=score[i].show.name;
-        film.parentElement.querySelector("div p").innerHTML="Language:"+score[i].show.language;
-    }
-    for(let [i, film]  of filmImg3.entries()){
-        film.setAttribute("src", score[i+6].show.image.medium);
-
-        film.parentElement.querySelector("div h5").innerText=score[i].show.name;
-        film.parentElement.querySelector("div p").innerHTML="Language:"+score[i].show.language;
-
-   // filmImg1.setAttribute("src", score[5].show.image.medium);
-    //filmImg2.setAttribute("src", score[7].show.image.medium);
-    //filmImg3.setAttribute("src", score[8].show.image.medium);
-}});
+        carouselItems[i].querySelector("h5").innerText=show.name;
+        carouselItems[i].querySelector("p").innerHTML="Language:"+show.language;
+        carouselItems[i].querySelector("div").appendChild(span);
+      
+    
+    });
+}
